@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(0, 0, 0); 
+}
+
+/* Navbar/ Header section*/
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+  
+.logo img {
+    height: 32px;
+    width: auto;
+}
+
+/* Menu links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 80px; 
+}
+  
+.nav-links a {
+    color: rgb(6, 9, 70);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+  
+.nav-links a:hover {
+    text-decoration: underline;
+}
+  
+/* Download button */
+.download-btn {
+    background-color: rgb(6, 9, 70); 
+    color: white;
+    padding: 10px 24px;
+    border-radius: 50px; 
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+  
+.download-btn:hover {
+    background-color: rgb(2, 124, 124);
+
+}
+
+/* Main/ Hero section */
+.hero {
+    text-align: center;
+    padding: 50px 20px 80px; 
+    min-height: 90vh; 
+}
+  
+.hero h1 {
+    margin-top: 100px;
+    font-size: 40px; 
+    font-weight: bold;
+    color: white; 
+    margin-bottom: 20px;
+    letter-spacing: -1px; 
+    line-height: 1.1;
+}
+  
+.tagline {
+    font-size: 30px;
+    color: #ffaa00; 
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+  
+.search {
+    display: flex;
+    max-width: 500px; 
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #ffaa00; 
+    border-radius: 10px; 
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+}
+  
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 18px 25px;
+    font-size: 18px;
+    outline: none;
+    color: #333;
+}
+  
+.search-input::placeholder {
+    color: #999999;
+}
+
+
+.search:hover {
+    border: 1px solid #ffaa00;
+    box-shadow: 0 0 40px #ffaa00;
+}
+
+
+.search i {
+    font-size: 18px;      
+    color: #555;         
+    cursor: pointer;      /* shows it's clickable */
+    padding-right: 30px;
+}
+
+.search i:hover {
+    color: black;
+}
+
+/* Results section */
+.results {
+    max-width: 700px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.result-card {
+    background: #ffffff;
+    border: 2px solid #ffaa00;
+    border-radius: 12px;
+    padding: 28px 32px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.result-card h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(6, 9, 70);
+    margin-bottom: 16px;
+}
+
+.result-definition {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 12px;
+}
+
+.result-example {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555555;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+.result-meta {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    color: #0000fe;
+}
+
+.result-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.result-placeholder,
+.result-empty,
+.result-loading,
+.result-error {
+    text-align: center;
+    color: #555555;
+}
+
+.result-placeholder i,
+.result-empty i,
+.result-loading i,
+.result-error i {
+    font-size: 48px;
+    color: #cccccc;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.result-empty i,
+.result-error i {
+    color:#0c0c7a;
+}
+
+.result-loading .spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+  
+.background span {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.6;
+    animation: move 20s infinite alternate ease-in-out;
+}
+  
+/* Circle 1 */
+.background span:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    background: #1a1aaf;
+    top: 10%;
+    left: 10%;
+}
+  
+/* Circle 2 */
+.background span:nth-child(2) {
+    width: 400px;
+    height: 400px;
+    background: #f6a391;
+    top: 50%;
+    left: 60%;
+    animation-duration: 25s;
+}
+  
+/* Circle 3 */
+.background span:nth-child(3) {
+    width: 350px;
+    height: 350px;
+    background: #6bcfbd;
+    top: 70%;
+    left: 20%;
+    animation-duration: 30s;
+}
+  
+
+.footer {
+    font-size: 12px;
+    color: #ffff;
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    line-height: 40px;
+}
+
